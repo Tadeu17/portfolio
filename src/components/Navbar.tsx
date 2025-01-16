@@ -45,8 +45,8 @@ const Navbar = () => {
             {/* Menu Container */}
             <div
               className={`absolute top-20 left-0 right-0 bg-black/90 backdrop-blur-sm
-    transform transition-all duration-500 overflow-hidden
-    ${isMenuOpen ? 'max-h-[100vh] ease-in' : 'max-h-0 ease-out'}`}
+    transform transition-all duration-500 overflow-hidden ease-in-out
+    ${isMenuOpen ? 'max-h-[100vh]' : 'max-h-0'}`}
             >
               {/* Menu Items */}
               <div className="container mx-auto px-6 py-4">
