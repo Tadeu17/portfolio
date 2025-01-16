@@ -7,6 +7,12 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('landing');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  function handleAnchorClick(itemId: string) {
+    setIsMenuOpen(false)
+    setActiveSection(itemId);
+    document.getElementById(itemId)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -45,18 +51,21 @@ const Navbar = () => {
             {/* Menu Container */}
             <div
               className={`absolute top-20 left-0 right-0 bg-black/90 backdrop-blur-sm
-    transform transition-all duration-500 overflow-hidden ease-in-out
-    ${isMenuOpen ? 'max-h-[100vh]' : 'max-h-0'}`}
+    transform transition-all duration-500 overflow-hidden ease-in-out md:relative md:inset-0
+    ${isMenuOpen ? 'max-h-[100vh]' : 'max-h-0 md:max-h-max'}`}
             >
               {/* Menu Items */}
               <div className="container mx-auto px-6 py-4">
-                <div className="flex flex-col gap-y-4">
+                <div className="flex flex-col gap-y-4 md:flex-row md:gap-8">
                   {['landing', 'about', 'resume', 'skills', 'projects', 'contact'].map((item) => (
                     <a
                       key={item}
                       href={`#${item}`}
                       className="relative inline-block px-1 py-2 group w-fit"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        handleAnchorClick(item)
+                      }}
                     >
                       <span
                         className={`text-sm font-medium 
@@ -66,12 +75,11 @@ const Navbar = () => {
                         {item.toUpperCase()}
                       </span>
                       <span
-                        className={`absolute left-0 bottom-0 h-0.5 bg-yellow-500 transition-all duration-1000 ease-in-out
-                                  ${activeSection === item ? 'w-full' : 'w-0 group-hover:w-full'}`
-                        }
+                        className={`absolute left-0 bottom-0 h-0.5 bg-yellow-500 transition-all duration-1000 ease-in-out`}
                         style={{
                           left: '50%',
-                          transform: 'translateX(-50%)'
+                          transform: 'translateX(-50%)',
+                          width: activeSection === item ? '100%' : '0'
                         }}
                       />
                     </a>
