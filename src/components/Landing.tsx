@@ -56,7 +56,7 @@ const Landing = () => {
             alt="Tadeu Marques"
             width={500}
             height={500}
-            className="w-full max-w-[600px] max-h-[600px] ml-auto object-cover rounded-full"
+            className="w-full max-w-[600px] max-h-[600px] ml-auto object-cover rounded-full outline outline-amber-400"
           />
         </div>
       </div>
