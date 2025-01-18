@@ -7,10 +7,6 @@ import Image from 'next/image';
 const About = () => {
   const [view, setView] = useState<'development' | 'management'>('development');
 
-  const handleSwitch = () => {
-    setView((prev) => (prev === 'development' ? 'management' : 'development'));
-  };
-
   const content = {
     development: (
       <>
