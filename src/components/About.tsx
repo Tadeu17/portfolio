@@ -72,8 +72,8 @@ const About = () => {
 
             {/* Sliding Highlight */}
             <span
-              className={`absolute top-1 left-1 w-24 h-6 bg-amber-400 rounded-full transition-transform ${view === 'management' ? 'translate-x-24' : 'translate-x-0'
-                }`}
+              className={`absolute top-1 left-1 w-24 h-6 bg-amber-400 rounded-full transition-transform 
+                ${view === 'management' ? 'translate-x-24' : 'translate-x-0'}`}
             />
           </div>
         </label>
