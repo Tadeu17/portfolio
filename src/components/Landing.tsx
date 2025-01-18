@@ -1,6 +1,27 @@
 import Image from 'next/image';
 
+const socials = [
+  {
+    alt: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/tadeumarques/',
+    icon: '/linkedin_icon.svg'
+  },
+  {
+    alt: 'Github',
+    href: 'https://github.com/Tadeu17',
+    icon: '/github_icon.svg'
+  },
+  {
+    alt: 'LinkedIn',
+    href: 'https://stackoverflow.com/users/3319997/tadeu-marques',
+    icon: '/stackoverflow_icon.svg'
+  }
+] as const
+
+
 const Landing = () => {
+  const socialLinks = socials
+
   return (
     <section id="landing" className="w-full min-h-screen flex items-center px-6 lg:px-20 bg-black relative pt-20 lg:pt-0">
       <div className="absolute inset-0 lg:hidden">
@@ -39,13 +60,28 @@ const Landing = () => {
               </div>
             </div>
           </h1>
-          <div className="flex gap-6 mt-10 justify-center lg:justify-start">
-            <button className="px-8 py-3 bg-amber-400 text-black font-semibold rounded-full hover:bg-amber-300 transition-colors">
-              HIRE ME
-            </button>
-            <button className="px-8 py-3 border-2 border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-colors">
-              MY WORKS
-            </button>
+
+          <div className="flex gap-6 mt-10 ml-1 justify-center lg:justify-start">
+            {
+              socialLinks.map((sl) =>
+                <a
+                  key={sl.href}
+                  href={sl.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity"
+                >
+                  <Image
+                    src={sl.icon}
+                    alt={sl.alt}
+                    width={64}
+                    height={64}
+                    className="w-8 h-8 bg-amber-400"
+                  />
+                </a>
+              )
+            }
+
           </div>
         </div>
 
@@ -56,7 +92,7 @@ const Landing = () => {
             alt="Tadeu Marques"
             width={500}
             height={500}
-            className="w-full max-w-[600px] max-h-[600px] ml-auto object-cover rounded-full outline outline-amber-400"
+            className="w-full max-w-[600px] max-h-[600px] ml-auto object-cover rounded-full outline outline-amber-400 shadow-lg shadow-amber-400"
           />
         </div>
       </div>
