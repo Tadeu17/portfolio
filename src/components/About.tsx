@@ -16,7 +16,7 @@ const About = () => {
         <ul className="text-gray-50 space-y-2">
           <li><strong>Professional Experience:</strong> 10+ years</li>
           <li><strong>Expertise:</strong> Vue.js, TypeScript, TailwindCSS</li>
-          <li><strong>Achievements:</strong> Delivered performant, accessible, and user-friendly apps</li>
+          <li><strong>Achievements:</strong> Delivered performant, responsive, accessible, and user-friendly apps</li>
           <li><strong>Hobbies:</strong> Entrepreneurship, martial arts, travel</li>
         </ul>
       </>
@@ -29,7 +29,7 @@ const About = () => {
         <ul className="text-gray-50 space-y-2">
           <li><strong>Leadership:</strong> Team mentoring, roadmap planning</li>
           <li><strong>Collaboration:</strong> Cross-functional team alignment</li>
-          <li><strong>Achievements:</strong> Improved team productivity, optimized processes</li>
+          <li><strong>Achievements:</strong> Improved team productivity, reduced onboarding time, optimized processes</li>
           <li><strong>Hobbies:</strong> Entrepreneurship, martial arts, travel</li>
         </ul>
       </>

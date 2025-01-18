@@ -57,7 +57,7 @@ const Navbar = () => {
               {/* Menu Items */}
               <div className="container mx-auto px-6 py-4">
                 <div className="flex flex-col gap-y-4 md:flex-row md:gap-8">
-                  {['landing', 'about', 'resume', 'skills', 'projects', 'contact'].map((item) => (
+                  {['landing', 'about', 'resume', 'skills', 'projects', 'testimonials', 'contact'].map((item) => (
                     <a
                       key={item}
                       href={`#${item}`}
