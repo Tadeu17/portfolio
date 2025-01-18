@@ -80,7 +80,7 @@ const Contact = () => {
   return (
     <section id="contact" className="container min-h-screen px-6 py-20">
       <h1 className="mb-8 text-3xl font-bold text-white">Contact Me</h1>
-      <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
+      <form onSubmit={handleSubmit} className="max-w-xl mx-auto">
         <div className="mb-6">
           <label htmlFor="name" className="block mb-2 text-sm font-medium text-white">Name</label>
           <input
