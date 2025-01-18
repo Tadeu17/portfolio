@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 
+import Image from 'next/image';
+
+
 const messageStyles = {
   default: 'text-white',
   success: 'text-green-400',
@@ -80,57 +83,73 @@ const Contact = () => {
   return (
     <section id="contact" className="container min-h-screen px-6 py-20">
       <h1 className="mb-8 text-3xl font-bold text-white">Contact Me</h1>
-      <form onSubmit={handleSubmit} className="max-w-xl mx-auto">
-        <div className="mb-6">
-          <label htmlFor="name" className="block mb-2 text-sm font-medium text-white">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:outline-none focus:border-blue-500"
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:outline-none focus:border-blue-500"
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label htmlFor="message" className="block mb-2 text-sm font-medium text-white">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows={4}
-            className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:outline-none focus:border-blue-500"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 disabled:opacity-50"
-        >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
-        </button>
 
-        {resultSubmitMessage && (
-          <div className={`mt-4 text-center ${messageStyles[resultSubmitSuccess || 'default']}`}>
-            {resultSubmitMessage}
-          </div>
-        )}
-      </form>
+      <section id="about" className="flex flex-col md:flex-row items-center gap-4">
+        <div className="md:w-1/3 flex justify-center mb-8 md:mb-0">
+          <Image
+            src="/tadeu.webp"
+            alt="Tadeu Marques"
+            width={256}
+            height={256}
+            className="w-64 h-64 rounded-xl object-cover shadow-[3px_3px_0px_0px] shadow-amber-400 "
+          />
+          {/* <span className='text-white'>teste</span> */}
+        </div>
+
+        <div className="w-full sm:w-2/3 text-left space-y-4">
+          <form onSubmit={handleSubmit} className="max-w-xl mx-auto">
+            <div className="mb-6">
+              <label htmlFor="name" className="block mb-2 text-sm font-medium text-white">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:outline-none focus:border-blue-500"
+                required
+              />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:outline-none focus:border-blue-500"
+                required
+              />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="message" className="block mb-2 text-sm font-medium text-white">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={4}
+                className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:outline-none focus:border-blue-500"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 disabled:opacity-50"
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+            </button>
+
+            {resultSubmitMessage && (
+              <div className={`mt-4 text-center ${messageStyles[resultSubmitSuccess || 'default']}`}>
+                {resultSubmitMessage}
+              </div>
+            )}
+          </form>
+        </div>
+      </section>
     </section>
   );
 };

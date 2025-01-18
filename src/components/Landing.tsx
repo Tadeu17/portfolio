@@ -2,6 +2,11 @@ import Image from 'next/image';
 
 const socials = [
   {
+    alt: 'Gmail',
+    href: 'mailto:eng.tadeu.marques@gmail.com',
+    icon: '/gmail_icon.svg'
+  },
+  {
     alt: 'LinkedIn',
     href: 'https://www.linkedin.com/in/tadeumarques/',
     icon: '/linkedin_icon.svg'
