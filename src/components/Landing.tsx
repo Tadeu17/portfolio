@@ -81,7 +81,7 @@ const Landing = () => {
                     alt={sl.alt}
                     width={64}
                     height={64}
-                    className="w-8 h-8 bg-amber-400"
+                    className="w-10 h-10 bg-amber-400 rounded-full p-2"
                   />
                 </a>
               )
