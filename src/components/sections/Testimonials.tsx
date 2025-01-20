@@ -76,7 +76,7 @@ const Testimonials = () => {
               className="flex-shrink-0 w-full px-2"
               style={{ flexBasis: "100%" }}
             >
-              <div className="bg-gray-800 border-2 border-amber-400 p-8 rounded-lg">
+              <div className="relative bg-gray-800 border-2 border-amber-400 p-8 rounded-lg">
                 <p className="text-white text-lg italic mb-4">
                   &quot;{testimonial.quote}&quot;
                 </p>
@@ -92,24 +92,28 @@ const Testimonials = () => {
                 >
                   View Source
                 </a>
+
+                {/* Navigation Buttons */}
+                {index === currentIndex && (
+                  <button
+                    onClick={prevSlide}
+                    className="absolute left-[-25px] top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-full text-gray-800 hover:bg-yellow-500 focus:outline-none"
+                  >
+                    <ChevronLeftIcon className="w-6 h-6" />
+                  </button>
+                )}
+                {index === currentIndex && (
+                  <button
+                    onClick={nextSlide}
+                    className="absolute right-[-25px] z-10 top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-full text-gray-800 hover:bg-yellow-500 focus:outline-none"
+                  >
+                    <ChevronRightIcon className="w-6 h-6" />
+                  </button>
+                )}
               </div>
             </div>
           ))}
         </div>
-
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-full text-gray-800 hover:bg-yellow-500 focus:outline-none"
-        >
-          <ChevronLeftIcon className="w-6 h-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-full text-gray-800 hover:bg-yellow-500 focus:outline-none"
-        >
-          <ChevronRightIcon className="w-6 h-6" />
-        </button>
       </div>
 
       {/* Dots Navigation */}
