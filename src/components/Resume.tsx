@@ -104,8 +104,8 @@ const Resume = () => {
         ))}
       </div>
 
-      <div className="pdf-preview">
-        <h3 className="text-2xl font-bold text-yellow-300 mb-6">My CV</h3>
+      <div className="pdf-preview hidden sm:block">
+        <h3 className="text-2xl font-bold text-yellow-400 mb-6">My CV</h3>
         <iframe
           src="/CV-custom-Tadeu-Marques-Frontend-developer.pdf#toolbar=0&view=FitH" // Customize parameters to control view
           title="Resume Preview"
