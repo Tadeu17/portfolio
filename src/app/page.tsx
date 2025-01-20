@@ -1,3 +1,7 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+
+
 import About from '@/components/sections/About';
 import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
@@ -9,6 +13,9 @@ import Testimonials from '@/components/sections/Testimonials';
 const HomePage = () => {
   return (
     <main className="flex flex-wrap justify-center">
+      <SpeedInsights />
+      <Analytics />
+
       <Landing />
       <About />
       <Resume />
