@@ -73,7 +73,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-full px-4"
+              className="flex-shrink-0 w-full px-2"
               style={{ flexBasis: "100%" }}
             >
               <div className="bg-gray-800 border-2 border-amber-400 p-8 rounded-lg">
@@ -118,7 +118,7 @@ const Testimonials = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 mx-1 rounded-full transition-colors duration-300 focus:outline-none ${index === currentIndex ? "bg-yellow-400" : "bg-gray-500"
+            className={`w-3 h-3 mx-1 rounded-full transition-colors duration-300 ${index === currentIndex ? "bg-yellow-400" : "bg-gray-500"
               }`}
           ></button>
         ))}
