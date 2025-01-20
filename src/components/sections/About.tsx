@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import Image from 'next/image';
+import SectionTitle from '../SectionTitle'
 
 const About = () => {
   const [view, setView] = useState<'development' | 'management'>('development');
@@ -50,7 +51,7 @@ const About = () => {
       </div>
 
       <div className="w-full lg:w-2/3 text-center lg:text-left">
-        <h2 className="text-gray-50 text-3xl font-semibold mb-2">About Me</h2>
+        <SectionTitle title="About Me" />
         <label className="mb-2 flex justify-center items-center cursor-pointer lg:justify-start">
           <div
             className="relative inline-block w-[200px] h-8 bg-gray-400 rounded-full transition"

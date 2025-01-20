@@ -3,6 +3,8 @@
 import React from 'react';
 import { useState } from "react";
 
+import SectionTitle from '../SectionTitle'
+
 type Skill = {
   name: string;
   level: string;
@@ -91,7 +93,7 @@ const Skills: React.FC = () => {
 
   return (
     <section id="skills" className="container min-h-screen px-6 py-20">
-      <h2 className="text-4xl font-bold text-yellow-400 mb-6">Skills</h2>
+      <SectionTitle title="About Me" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {skillsData.map((cathegory) => {

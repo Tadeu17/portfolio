@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 
+import SectionTitle from '../SectionTitle'
+
 
 const messageStyles = {
   default: 'text-white',
@@ -82,7 +84,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="container min-h-screen px-6 py-20">
-      <h1 className="mb-8 text-3xl font-bold text-white">Contact Me</h1>
+      <SectionTitle title="Contact" />
 
       <section id="about" className="flex flex-col md:flex-row items-center gap-4">
         <div className="md:w-1/3 flex justify-center mb-8 md:mb-0">

@@ -1,6 +1,7 @@
-import ResumeCard from "./ResumeCard";
+import ResumeCard from "../ResumeCard";
 
-import { TRoleInfo } from "./types";
+import { TRoleInfo } from "../types";
+import SectionTitle from '../SectionTitle'
 
 const Resume = () => {
   const professionalExperience: TRoleInfo[] = [
@@ -88,7 +89,7 @@ const Resume = () => {
 
   return (
     <section id="resume" className="container min-h-screen px-6 py-20">
-      <h2 className="text-4xl font-bold text-yellow-400 mb-6">Resume</h2>
+      <SectionTitle title="Resume" />
 
       {/* Experience Timeline */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">

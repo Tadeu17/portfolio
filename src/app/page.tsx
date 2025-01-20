@@ -1,10 +1,10 @@
-import About from '@/components/About';
-import Projects from '@/components/Projects';
-import Contact from '@/components/Contact';
-import Landing from '@/components/Landing';
-import Resume from '@/components/Resume';
-import Skills from '@/components/Skills';
-import Testimonials from '@/components/Testimonials';
+import About from '@/components/sections/About';
+import Projects from '@/components/sections/Projects';
+import Contact from '@/components/sections/Contact';
+import Landing from '@/components/sections/Landing';
+import Resume from '@/components/sections/Resume';
+import Skills from '@/components/sections/Skills';
+import Testimonials from '@/components/sections/Testimonials';
 
 const HomePage = () => {
   return (
