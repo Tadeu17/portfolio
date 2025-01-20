@@ -37,9 +37,9 @@ const Skills: React.FC = () => {
               key={cathegory.cathegory}
               className="bg-gray-800 border-2 border-amber-400 p-6 rounded-lg"
             >
-              <h3 className="text-2xl font-semibold text-amber-400 mb-4">
+              <h2 className="text-2xl font-semibold text-amber-400 mb-4">
                 {cathegory.cathegory}
-              </h3>
+              </h2>
               <ul className="space-y-3">
                 {cathegory.skills.map((skill, index) => (
                   <li

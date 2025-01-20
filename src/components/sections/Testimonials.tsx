@@ -80,9 +80,9 @@ const Testimonials = () => {
                 <p className="text-white text-lg italic mb-4">
                   &quot;{testimonial.quote}&quot;
                 </p>
-                <h3 className="text-yellow-400 font-semibold text-xl mb-2">
+                <h2 className="text-yellow-400 font-semibold text-xl mb-2">
                   {testimonial.name}
-                </h3>
+                </h2>
                 <p className="text-gray-400 mb-4">{testimonial.title}</p>
                 <a
                   href={testimonial.source}
