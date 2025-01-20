@@ -1,28 +1,6 @@
 import Image from 'next/image';
 
-const socials = [
-  {
-    alt: 'Gmail',
-    href: 'mailto:eng.tadeu.marques@gmail.com',
-    icon: '/gmail_icon.svg'
-  },
-  {
-    alt: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/tadeumarques/',
-    icon: '/linkedin_icon.svg'
-  },
-  {
-    alt: 'Github',
-    href: 'https://github.com/Tadeu17',
-    icon: '/github_icon.svg'
-  },
-  {
-    alt: 'LinkedIn',
-    href: 'https://stackoverflow.com/users/3319997/tadeu-marques',
-    icon: '/stackoverflow_icon.svg'
-  }
-] as const
-
+import { socials } from "@/data"
 
 const Landing = () => {
   const socialLinks = socials

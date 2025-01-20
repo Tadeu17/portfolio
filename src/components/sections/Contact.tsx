@@ -6,7 +6,6 @@ import Image from 'next/image';
 
 import SectionTitle from '../SectionTitle'
 
-
 const messageStyles = {
   default: 'text-white',
   success: 'text-green-400',

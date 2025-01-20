@@ -5,3 +5,13 @@ export type TRoleInfo = {
   description: string[],
   skills: string[]
 }
+
+export type TSkill = {
+  name: string;
+  level: string;
+};
+
+export type TSkillsCathegory = {
+  cathegory: string;
+  skills: TSkill[];
+};
