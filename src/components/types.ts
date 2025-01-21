@@ -3,7 +3,8 @@ export type TRoleInfo = {
   role: string,
   company: string,
   description: string[],
-  skills: string[]
+  skills: string[],
+  href?: string
 }
 
 export type TSkill = {

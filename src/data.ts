@@ -143,6 +143,17 @@ export const professionalExperience: TRoleInfo[] = [
   },
 ] as const;
 
+export const educationExperience: TRoleInfo = {
+  timeframe: "2028 - May 2014",
+  role: "Student & Thesis Intern",
+  company: "Cardmobili",
+  description: [
+    "For my Master thesis I developed an AR android feature for a company to show in real time where all the stores were located around the user.",
+  ],
+  skills: ["Android"],
+  href: 'https://hdl.handle.net/10216/84105'
+}
+
 import { TSkillsCathegory } from './components/types'
 export const skillsData: TSkillsCathegory[] = [
   {

@@ -3,6 +3,7 @@ import ResumeCard from "../ResumeCard";
 import SectionTitle from '../SectionTitle'
 
 import { professionalExperience } from '@/data'
+import { educationExperience as education } from '@/data'
 
 const Resume = () => {
 
@@ -24,8 +25,20 @@ const Resume = () => {
         ))}
       </div>
 
+      <section id="education">
+        <h2 className="text-2xl font-bold text-white mb-6">Education</h2>
+
+        <ResumeCard
+          timeframe={education.timeframe}
+          role={education.role}
+          company={education.company}
+          description={education.description}
+          skills={education.skills}
+          href={education.href} />
+      </section>
+
       <div className="pdf-preview hidden sm:block">
-        <h2 className="text-2xl font-bold text-yellow-400 mb-6">My CV</h2>
+        <h2 className="text-2xl font-bold text-white mb-6">My CV</h2>
         <iframe
           src="/CV-custom-Tadeu-Marques-Frontend-developer.pdf#toolbar=0&view=FitH" // Customize parameters to control view
           title="Resume Preview"
