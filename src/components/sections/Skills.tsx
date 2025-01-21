@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
           const isExpandedMobile = expandedCategories[cathegory.cathegory];
 
           return (
-            <div
+            <article
               key={cathegory.cathegory}
               className="bg-gray-800 border-2 border-amber-400 p-6 rounded-lg"
             >
@@ -63,7 +63,7 @@ const Skills: React.FC = () => {
                   {isExpandedMobile ? "Show Less" : "Show More"}
                 </button>
               </div>
-            </div>
+            </article>
           );
         })}
       </div>

@@ -71,7 +71,7 @@ const Testimonials = () => {
           }}
         >
           {testimonials.map((testimonial, index) => (
-            <div
+            <article
               key={index}
               className="flex-shrink-0 w-full px-2"
               style={{ flexBasis: "100%" }}
@@ -111,13 +111,13 @@ const Testimonials = () => {
                   </button>
                 )}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
 
       {/* Dots Navigation */}
-      <div className="flex justify-center mt-6">
+      <nav className="flex justify-center mt-6">
         {testimonials.map((_, index) => (
           <button
             key={index}
@@ -126,7 +126,7 @@ const Testimonials = () => {
               }`}
           ></button>
         ))}
-      </div>
+      </nav>
     </section>
   );
 };

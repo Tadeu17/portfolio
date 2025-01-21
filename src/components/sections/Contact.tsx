@@ -85,7 +85,7 @@ const Contact = () => {
     <section id="contact" className="container min-h-screen px-6 py-20">
       <SectionTitle title="Contact" />
 
-      <section id="about" className="flex flex-col md:flex-row items-center gap-4">
+      <section className="flex flex-col md:flex-row items-center gap-4">
         <div className="md:w-1/3 flex justify-center mb-8 md:mb-0">
           <Image
             src="/tadeu.webp"
