@@ -11,6 +11,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <article
+            id={project.id}
             key={index}
             className="bg-gray-800 border-2 border-amber-400 rounded-lg shadow-md overflow-hidden hover:scale-105 transform transition-all"
           >

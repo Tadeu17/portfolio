@@ -64,6 +64,7 @@ export const socials = [
 import { TRoleInfo } from "./components/types";
 export const professionalExperience: TRoleInfo[] = [
   {
+    id: "mammoth",
     timeframe: "Sep 2021 - May 2024",
     role: "Frontend Manager",
     company: "Mammoth Analytics",
@@ -77,6 +78,7 @@ export const professionalExperience: TRoleInfo[] = [
     skills: ["Javascript", "Vue.js", "SCRUM", "Jira", "Figma", "Git"],
   },
   {
+    id: "mammoth",
     timeframe: "Dec 2020 - Sep 2021",
     role: "Lead Frontend Developer",
     company: "Mammoth Analytics",
@@ -88,6 +90,7 @@ export const professionalExperience: TRoleInfo[] = [
     skills: ["Javascript", "Vue.js", "Angular js", "Design Systems", "Sass", "Git"],
   },
   {
+    id: "tips4y",
     timeframe: "Aug 2020 - Nov 2020",
     role: "Lead Frontend Developer",
     company: "Tips4y",
@@ -99,6 +102,7 @@ export const professionalExperience: TRoleInfo[] = [
     skills: ["Javascript", "Vue.js", "CSS", "Figma", "PHP", "Git"],
   },
   {
+    id: "betmarkets",
     timeframe: "Apr 18 - Dec 2019",
     role: "Lead Frontend Developer",
     company: "Betmarkets",
@@ -110,6 +114,7 @@ export const professionalExperience: TRoleInfo[] = [
     skills: ["Javascript", "Vue.js", "CSS", "SASS", "amcharts", "Git"],
   },
   {
+    id: "jumia",
     timeframe: "Apr 2017 - Apr 18",
     role: "Frontend Developer",
     company: "Jumia",
@@ -144,6 +149,7 @@ export const professionalExperience: TRoleInfo[] = [
 ] as const;
 
 export const educationExperience: TRoleInfo = {
+  id: 'education',
   timeframe: "2028 - May 2014",
   role: "Student & Thesis Intern",
   company: "Cardmobili",
@@ -216,6 +222,16 @@ import { TProject } from "./components/types";
 
 export const projects: TProject[] = [
   {
+    id: "portfolio-project",
+    title: "Portfolio",
+    thumbnail: '/images/portfolio.webp',
+    type: 'personal',
+    href: 'https://www.tadeu-marques.com',
+    github: 'https://github.com/Tadeu17/portfolio',
+    description: 'My portfolio to showcase all projects I worked on and social proof testimonials',
+  },
+  {
+    id: "notes-project",
     title: "Notes app",
     thumbnail: '/images/notes-app.webp',
     type: 'personal',
@@ -224,6 +240,7 @@ export const projects: TProject[] = [
     description: 'A simple and effective app for managing notes.',
   },
   {
+    id: "study-project",
     title: "Study app",
     thumbnail: '/images/study-app.webp',
     type: 'personal',
@@ -232,6 +249,7 @@ export const projects: TProject[] = [
     description: 'An app designed to help anyone learn whatever they want by leveraging AI.',
   },
   {
+    id: "mammoth-project",
     title: "Mammoth",
     thumbnail: '/images/mammoth.webp',
     type: 'professional',
@@ -239,6 +257,7 @@ export const projects: TProject[] = [
     description: 'A professional data analytics platform for enterprise clients.',
   },
   {
+    id: "betmarkets-project",
     title: 'Betmarkets',
     thumbnail: '/images/betmarkets.webp',
     type: 'professional',
@@ -246,6 +265,7 @@ export const projects: TProject[] = [
     description: 'A financial platform for managing investments in sports betting.',
   },
   {
+    id: "tips4y-project",
     title: 'Tips4y',
     thumbnail: '/images/tips4y.webp',
     type: 'professional',
@@ -253,6 +273,7 @@ export const projects: TProject[] = [
     description: 'Tips4y is a technology company specializing in digital solutions for the automotive aftermarket, aiming to enhance efficiency and innovate the future of automotive mobility.',
   },
   {
+    id: "jumia-project",
     title: 'Jumia',
     thumbnail: '/images/jumia.webp',
     type: 'professional',

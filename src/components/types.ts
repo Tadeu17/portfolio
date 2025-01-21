@@ -1,4 +1,5 @@
 export type TRoleInfo = {
+  id?: string,
   timeframe: string,
   role: string,
   company: string,
@@ -18,6 +19,7 @@ export type TSkillsCathegory = {
 };
 
 export type TProject = {
+  id: string,
   title: string,
   thumbnail: string,
   type: string,

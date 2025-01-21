@@ -9,13 +9,14 @@ const Resume = () => {
 
   return (
     <section id="resume" className="container min-h-screen px-6 py-20">
-      <SectionTitle title="Resume" />
+      <SectionTitle title="Career" />
 
       {/* Experience Timeline */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
         {professionalExperience.map((job, index) => (
           <ResumeCard
             key={index}
+            id={job.id}
             timeframe={job.timeframe}
             role={job.role}
             company={job.company}
@@ -29,6 +30,7 @@ const Resume = () => {
         <h2 className="text-2xl font-bold text-white mb-6">Education</h2>
 
         <ResumeCard
+          id={education.id}
           timeframe={education.timeframe}
           role={education.role}
           company={education.company}
