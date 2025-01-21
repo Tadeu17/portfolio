@@ -25,8 +25,8 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="container min-h-screen px-6 py-20">
-      <SectionTitle title="About Me" />
+    <section id="skills" className="container px-6 py-20">
+      <SectionTitle title="Skills" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {skillsData.map((cathegory) => {

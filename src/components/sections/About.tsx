@@ -38,7 +38,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="container min-h-screen px-6 py-20 flex flex-col md:flex-row">
+    <section id="about" className="container px-6 py-20 flex flex-col md:flex-row">
       <div className="md:w-1/3 flex justify-center mb-8 md:mb-0">
         <Image
           src="/tadeu.webp"
