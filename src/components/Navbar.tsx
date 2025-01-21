@@ -50,7 +50,7 @@ const Navbar = () => {
 
             {/* Menu Container */}
             <div
-              className={`absolute top-20 left-0 right-0 backdrop-blur-sm
+              className={`absolute top-20 left-0 right-0 bg-gray-800/90 backdrop-blur-sm
     transform transition-all duration-500 overflow-hidden ease-in-out md:relative md:inset-0
     ${isMenuOpen ? 'max-h-[100vh]' : 'max-h-0 md:max-h-max'}`}
             >
