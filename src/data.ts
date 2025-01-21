@@ -210,7 +210,7 @@ export const projects: TProject[] = [
     type: 'personal',
     href: 'https://notes-app-6b807.web.app/#/',
     github: 'https://github.com/Tadeu17/vue3-notes-project',
-    description: 'A simple and effective app for managing notes efficiently.',
+    description: 'A simple and effective app for managing notes.',
   },
   {
     title: "Study app",
@@ -218,14 +218,14 @@ export const projects: TProject[] = [
     type: 'personal',
     href: 'https://study-web-app-cb1b5.web.app/play',
     github: 'https://github.com/Tadeu17/study-app',
-    description: 'An app designed to help students plan their study schedules.',
+    description: 'An app designed to help anyone learn whatever they want by leveraging AI.',
   },
   {
     title: "Mammoth",
     thumbnail: '/images/mammoth.webp',
     type: 'professional',
     href: 'https://mammoth.io/',
-    description: 'A professional analytics platform for enterprise clients.',
+    description: 'A professional data analytics platform for enterprise clients.',
   },
   {
     title: 'Betmarkets',
@@ -239,7 +239,7 @@ export const projects: TProject[] = [
     thumbnail: '/images/tips4y.webp',
     type: 'professional',
     href: 'https://www.tips4y.pt/',
-    description: 'A smart tips platform that helps users achieve their goals.',
+    description: 'Tips4y is a technology company specializing in digital solutions for the automotive aftermarket, aiming to enhance efficiency and innovate the future of automotive mobility.',
   },
   {
     title: 'Jumia',
