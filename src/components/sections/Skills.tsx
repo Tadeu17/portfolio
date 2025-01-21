@@ -59,6 +59,7 @@ const Skills: React.FC = () => {
                 <button
                   onClick={() => toggleCathegory(cathegory.cathegory)}
                   className="px-4 py-2 bg-amber-400 text-black font-bold rounded-md hover:bg-amber-300 transition"
+                  aria-label={`Expand cathegory ${cathegory.cathegory}`}
                 >
                   {isExpandedMobile ? "Show Less" : "Show More"}
                 </button>
@@ -73,6 +74,7 @@ const Skills: React.FC = () => {
         <button
           onClick={toggleAllCategories}
           className="px-6 py-3 bg-amber-400 text-black font-bold rounded-md hover:bg-amber-300 transition"
+          aria-label="Expand all cathegories"
         >
           {isExpandedDesktop ? "Show Less" : "Show More"}
         </button>

@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-sm">
+      <nav className="fixed top-0 left-0 right-0 z-40 bg-gray-800/90 backdrop-blur-sm">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap items-center justify-between min-h-20">
             <span className="md:w-auto h-20 flex items-center text-2xl font-bold text-white">Tadeu</span>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
             {/* Menu Container */}
             <div
-              className={`absolute top-20 left-0 right-0 bg-black/90 backdrop-blur-sm
+              className={`absolute top-20 left-0 right-0 backdrop-blur-sm
     transform transition-all duration-500 overflow-hidden ease-in-out md:relative md:inset-0
     ${isMenuOpen ? 'max-h-[100vh]' : 'max-h-0 md:max-h-max'}`}
             >
@@ -94,6 +94,7 @@ const Navbar = () => {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="h-20 flex gap-1 items-center text-gray-400 hover:text-white"
+                aria-label="Menu button"
               >
                 <Bars3Icon className="h-6 w-6 text-white" />
                 MENU

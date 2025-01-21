@@ -6,7 +6,7 @@ const Landing = () => {
   const socialLinks = socials
 
   return (
-    <section id="landing" className="w-full min-h-screen flex items-center px-6 lg:px-20 bg-black relative pt-20 lg:pt-0">
+    <section id="landing" className="w-full min-h-screen flex items-center px-6 lg:px-20 relative pt-20 lg:pt-0">
       <div className="absolute inset-0 lg:hidden">
         <Image
           src="/main-background.webp"
@@ -75,6 +75,7 @@ const Landing = () => {
             alt="Tadeu Marques"
             width={500}
             height={500}
+            priority
             className="w-full max-w-[600px] max-h-[600px] ml-auto object-cover rounded-full outline outline-amber-400 shadow-lg shadow-amber-400"
           />
         </div>

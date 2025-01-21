@@ -15,7 +15,7 @@ const ResumeCard = ({ timeframe, role, company, description, skills }: TRoleInfo
 
     {/* Skills Section */}
     <div className="mt-4">
-      <h5 className="text-lg font-semibold text-white mb-2">Skills:</h5>
+      <h4 className="text-lg font-semibold text-white mb-2">Skills:</h4>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
           <span

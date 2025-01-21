@@ -98,6 +98,7 @@ const Testimonials = () => {
                   <button
                     onClick={prevSlide}
                     className="absolute left-[-25px] top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-full text-gray-800 hover:bg-yellow-500 focus:outline-none"
+                    aria-label="Show previous testimonial"
                   >
                     <ChevronLeftIcon className="w-6 h-6" />
                   </button>
@@ -106,6 +107,7 @@ const Testimonials = () => {
                   <button
                     onClick={nextSlide}
                     className="absolute right-[-25px] z-10 top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-full text-gray-800 hover:bg-yellow-500 focus:outline-none"
+                    aria-label="Show next testimonial"
                   >
                     <ChevronRightIcon className="w-6 h-6" />
                   </button>
@@ -122,9 +124,11 @@ const Testimonials = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 mx-1 rounded-full transition-colors duration-300 ${index === currentIndex ? "bg-yellow-400" : "bg-gray-500"
-              }`}
-          ></button>
+            className={`w-6 h-6 mx-1 rounded-full transition-colors duration-300 
+              ${index === currentIndex ? "bg-yellow-400" : "bg-gray-500"}`}
+            aria-label={`Show testimonial ${index}`}
+          >
+          </button>
         ))}
       </nav>
     </section>
