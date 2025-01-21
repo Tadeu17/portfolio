@@ -36,19 +36,21 @@ const ResumeCard = ({ id, timeframe, role, company, description, skills, href }:
     </ul>
 
     {/* Skills Section */}
-    <div className="mt-4">
-      <h4 className="text-lg font-semibold text-white mb-2">Skills:</h4>
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <span
-            key={index}
-            className="px-3 py-1 text-sm bg-yellow-400 text-black rounded-full"
-          >
-            {skill}
-          </span>
-        ))}
+    {skills &&
+      <div className="mt-4">
+        <h4 className="text-lg font-semibold text-white mb-2">Skills:</h4>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 text-sm bg-yellow-400 text-black rounded-full"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
+    }
   </div >
 );
 export default ResumeCard;

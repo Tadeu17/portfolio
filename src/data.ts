@@ -75,7 +75,7 @@ export const professionalExperience: TRoleInfo[] = [
       "Reduced development time in some features from 3 months to 3-4 weeks",
       "Improved code efficiency by reducing bundling size and compilation time by 10x"
     ],
-    skills: ["Javascript", "Vue.js", "SCRUM", "Jira", "Figma", "Git"],
+    // skills: ["Javascript", "Vue.js", "SCRUM", "Jira", "Figma", "Git"],
   },
   {
     id: "mammoth",
@@ -87,7 +87,7 @@ export const professionalExperience: TRoleInfo[] = [
       "Designed and implemented a Design System Manager (DSM) for UI consistency.",
       "Mentored team members on modern frontend practices, boosting productivity.",
     ],
-    skills: ["Javascript", "Vue.js", "Angular js", "Design Systems", "Sass", "Git"],
+    // skills: ["Javascript", "Vue.js", "Angular js", "Design Systems", "Sass", "Git"],
   },
   {
     id: "tips4y",
@@ -99,7 +99,7 @@ export const professionalExperience: TRoleInfo[] = [
       "Led the team to deliver key projects on a tight timeline for crucial clients, ensuring quality and timely completion through effective collaboration.",
       "Acted as a liaison between development and project management, enhancing communication and aligning goals.",
     ],
-    skills: ["Javascript", "Vue.js", "CSS", "Figma", "PHP", "Git"],
+    // skills: ["Javascript", "Vue.js", "CSS", "Figma", "PHP", "Git"],
   },
   {
     id: "betmarkets",
@@ -111,7 +111,7 @@ export const professionalExperience: TRoleInfo[] = [
       "Mentored an intern in Vue.js and frontend development, fostering both technical skills and professional growth. ",
       "The platform supported nearly €1,000,000 in user wagers prior to the next major release, highly contributing to the company’s revenue with minimal support tickets being raised for fixes in the platform",
     ],
-    skills: ["Javascript", "Vue.js", "CSS", "SASS", "amcharts", "Git"],
+    // skills: ["Javascript", "Vue.js", "CSS", "SASS", "amcharts", "Git"],
   },
   {
     id: "jumia",
@@ -123,7 +123,7 @@ export const professionalExperience: TRoleInfo[] = [
       "Delivered consistent design updates based on UI / UX feedback, optimizing for both desktop and mobile users.",
       "Improved efficiency on an internal platform for package processing Worked under a good Agile SCRUM oriented team."
     ],
-    skills: ["Javascript", "Angular js", "Zeplin", "CSS", "google maps", "google analytics", "gulp", "JIRA", "SCRUM", "Git"],
+    // skills: ["Javascript", "Angular js", "Zeplin", "CSS", "google maps", "google analytics", "gulp", "JIRA", "SCRUM", "Git"],
   },
   {
     timeframe: "Feb 2017 - Apr 2017",
@@ -133,7 +133,7 @@ export const professionalExperience: TRoleInfo[] = [
       "(2 months isolated job) develop interfaces for a big portuguese Electricity Company (EDP).",
       "Significantly improvskills.",
     ],
-    skills: ["Javascript", "Vue.js", "HTML5", "CSS3", "Git", "Git"],
+    // skills: ["Javascript", "Vue.js", "HTML5", "CSS3", "Git", "Git"],
   },
   {
     timeframe: "Aug 2014 - Jun 2016",
@@ -144,7 +144,7 @@ export const professionalExperience: TRoleInfo[] = [
       "Learned and applied foundational knowledge of Vue.js a",
       "Created a commercial flow of expenses management and a users’ profile and interaction dashboard.",
     ],
-    skills: ["Javascript", "Vue.js", "HTML5", "CSS3", "Git", "Git"],
+    // skills: ["Javascript", "Vue.js", "HTML5", "CSS3", "Git", "Git"],
   },
 ] as const;
 
@@ -167,37 +167,40 @@ export const skillsData: TSkillsCathegory[] = [
     skills: [
       { name: "Vue.js", level: "Expert" },
       { name: "Vue 3", level: "Expert" },
+      { name: "Vuex", level: "Expert" },
       { name: "HTML5", level: "Expert" },
-      { name: "REST APIs", level: "Expert" }, // New
+      { name: "REST APIs", level: "Expert" },
       { name: "JavaScript", level: "Expert" },
       { name: "TypeScript", level: "Advanced" },
+      { name: "Vuetify", level: "Advanced" },
       { name: "TailwindCSS", level: "Advanced" },
-      { name: "Bootstrap", level: "Advanced" }, // New
-      { name: "Sass/SCSS", level: "Advanced" }, // New
+      { name: "Bootstrap", level: "Advanced" },
+      { name: "Sass/SCSS", level: "Advanced" },
       { name: "CSS3", level: "Advanced" },
       { name: "Pinia", level: "Advanced" },
+      { name: "Web Performance", level: "Intermediate" },
+      { name: "SEO", level: "Intermediate" },
       { name: "React", level: "Intermediate" },
       { name: "Nuxt", level: "Intermediate" },
-      { name: "AngularJS", level: "Intermediate" }, // New
-      { name: "Progressive Web Apps (PWAs)", level: "Intermediate" }, // New
-      { name: "SEO", level: "Intermediate" }, // New
-      { name: "Web Accessibility (WCAG)", level: "Basic" }, // New
+      { name: "AngularJS", level: "Intermediate" },
+      { name: "Progressive Web Apps (PWAs)", level: "Intermediate" },
+      { name: "Web Accessibility (WCAG)", level: "Basic" },
     ],
   },
   {
     cathegory: "Management & Leadership",
     skills: [
-      { name: "Team Motivation", level: "Expert" }, // New
-      { name: "Recruitment & Hiring", level: "Expert" }, // New
+      { name: "Team Motivation", level: "Expert" },
+      { name: "Recruitment & Hiring", level: "Expert" },
       { name: "Team Leadership", level: "Expert" },
       { name: "Agile/Scrum", level: "Advanced" },
-      { name: "Conflict Resolution", level: "Advanced" }, // New
+      { name: "Conflict Resolution", level: "Advanced" },
       { name: "Cross-functional Team Management", level: "Advanced" },
-      { name: "Project Planning & Roadmaps", level: "Advanced" }, // New
-      { name: "Stakeholder Communication", level: "Advanced" }, // New
+      { name: "Project Planning & Roadmaps", level: "Advanced" },
+      { name: "Stakeholder Communication", level: "Advanced" },
       { name: "Product Ownership", level: "Intermediate" },
-      { name: "Performance Reviews", level: "Advanced" }, // New
-      { name: "Resource Allocation", level: "Advanced" }, // New
+      { name: "Performance Reviews", level: "Advanced" },
+      { name: "Resource Allocation", level: "Advanced" },
     ],
   },
   {
@@ -228,7 +231,8 @@ export const projects: TProject[] = [
     type: 'personal',
     href: 'https://www.tadeu-marques.com',
     github: 'https://github.com/Tadeu17/portfolio',
-    description: 'My portfolio to showcase all projects I worked on and social proof testimonials',
+    description: 'My portfolio to showcase all projects I worked on and social proof testimonials while mainting very good performance for web vitals, accessibility and SEO',
+    skills: ["Javascript", "Next js", "SEO", "Web Performance", "Accessibility", "Tailwind css", "React", "Analytics", "Vercel", "SCRUM", "Git", "ChatGPT", "AI"]
   },
   {
     id: "notes-project",
@@ -238,6 +242,7 @@ export const projects: TProject[] = [
     href: 'https://notes-app-6b807.web.app/#/',
     github: 'https://github.com/Tadeu17/vue3-notes-project',
     description: 'A simple and effective app for managing notes.',
+    skills: ["Javascript", "Vue 3", "Firebase", "Vite", "CSS", "Git", "Bulma", "Vue Router"]
   },
   {
     id: "study-project",
@@ -247,6 +252,7 @@ export const projects: TProject[] = [
     href: 'https://study-web-app-cb1b5.web.app/play',
     github: 'https://github.com/Tadeu17/study-app',
     description: 'An app designed to help anyone learn whatever they want by leveraging AI.',
+    skills: ["Javascript", "Vue 3", "Firebase", "Vite", "CSS", "AI", "Git", "Vue Router"]
   },
   {
     id: "mammoth-project",
@@ -255,6 +261,7 @@ export const projects: TProject[] = [
     type: 'professional',
     href: 'https://mammoth.io/',
     description: 'A professional data analytics platform for enterprise clients.',
+    skills: ["Javascript", "Vue js", "Angular js", "Storybook", "Vuex", "Vue Router", "CSS", "SASS / SCSS", "Webpack", "Vite", "JIRA", "SCRUM", "Git", "Web Performance", "Figma"]
   },
   {
     id: "betmarkets-project",
@@ -263,6 +270,7 @@ export const projects: TProject[] = [
     type: 'professional',
     href: 'https://www.youtube.com/watch?v=zR-3nc4ajR8&t=208s',
     description: 'A financial platform for managing investments in sports betting.',
+    skills: ["Javascript", "Vue js", "Vuex", "Webpack", "Vue Router", "SASS / SCSS", "Am Charts", "Google Analytics", "Hotjar", "Git", "Figma"]
   },
   {
     id: "tips4y-project",
@@ -271,6 +279,7 @@ export const projects: TProject[] = [
     type: 'professional',
     href: 'https://www.tips4y.pt/',
     description: 'Tips4y is a technology company specializing in digital solutions for the automotive aftermarket, aiming to enhance efficiency and innovate the future of automotive mobility.',
+    skills: ["Javascript", "Vue js", "Vuex", "Vue Router", "Webpack", "PHP", "JIRA", "SCRUM", "Git", "Team management", "Conflict resolution"]
   },
   {
     id: "jumia-project",
@@ -279,5 +288,6 @@ export const projects: TProject[] = [
     type: 'professional',
     href: 'https://packagetracker-services.jumia.com/#/',
     description: 'E-commerce platform connecting millions of users across Africa.',
+    skills: ["Javascript", "Angular js", "Angular Forms", "Zeplin", "CSS", "google maps", "google analytics", "gulp", "JIRA", "SCRUM", "Git"]
   },
 ] as const;
