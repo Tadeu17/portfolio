@@ -1,51 +1,6 @@
 import Image from 'next/image';
 
-const projects = [
-  {
-    title: "Notes app",
-    thumbnail: '/images/notes-app.webp',
-    type: 'personal',
-    href: 'https://notes-app-6b807.web.app/#/',
-    github: 'https://github.com/Tadeu17/vue3-notes-project',
-    description: 'A simple and effective app for managing notes efficiently.',
-  },
-  {
-    title: "Study app",
-    thumbnail: '/images/study-app.webp',
-    type: 'personal',
-    href: 'https://study-web-app-cb1b5.web.app/play',
-    github: 'https://github.com/Tadeu17/study-app',
-    description: 'An app designed to help students plan their study schedules.',
-  },
-  {
-    title: "Mammoth",
-    thumbnail: '/images/mammoth.webp',
-    type: 'professional',
-    href: 'https://mammoth.io/',
-    description: 'A professional analytics platform for enterprise clients.',
-  },
-  {
-    title: 'Betmarkets',
-    thumbnail: '/images/betmarkets.webp',
-    type: 'professional',
-    href: 'https://www.youtube.com/watch?v=zR-3nc4ajR8&t=208s',
-    description: 'A financial platform for managing investments in sports betting.',
-  },
-  {
-    title: 'Tips4y',
-    thumbnail: '/images/tips4y.webp',
-    type: 'professional',
-    href: 'https://www.tips4y.pt/',
-    description: 'A smart tips platform that helps users achieve their goals.',
-  },
-  {
-    title: 'Jumia',
-    thumbnail: '/images/jumia.webp',
-    type: 'professional',
-    href: 'https://packagetracker-services.jumia.com/#/',
-    description: 'E-commerce platform connecting millions of users across Africa.',
-  },
-];
+import { projects } from '@/data'
 
 const Projects = () => {
   return (

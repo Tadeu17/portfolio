@@ -15,3 +15,12 @@ export type TSkillsCathegory = {
   cathegory: string;
   skills: TSkill[];
 };
+
+export type TProject = {
+  title: string,
+  thumbnail: string,
+  type: string,
+  href: string,
+  github?: string,
+  description: string,
+}
