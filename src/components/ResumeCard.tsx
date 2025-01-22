@@ -9,7 +9,7 @@ const ResumeCard = ({ id, timeframe, role, company, description, skills, href }:
     <p className="text-gray-400 text-sm mb-4">{company}</p>
 
     {id &&
-      <a className="block mb-4 text-white underline cursor-pointer" onClick={(e) => {
+      <button className="block mb-4 text-white underline cursor-pointer" onClick={(e) => {
         e.preventDefault();
         const element = document.getElementById(`${id}-project`);
         if (element) {
@@ -20,7 +20,7 @@ const ResumeCard = ({ id, timeframe, role, company, description, skills, href }:
         }
       }}>
         More details
-      </a>
+      </button>
     }
 
     {
