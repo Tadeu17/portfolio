@@ -14,12 +14,6 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.7
-    };
-
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && entry.intersectionRatio > 0.25) {
@@ -28,9 +22,13 @@ const Navbar = () => {
       });
     };
 
-    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    const observer = new IntersectionObserver(handleIntersect, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.7
+    });
 
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll('main > section[id]');
     sections.forEach(section => {
       observer.observe(section);
     });
@@ -57,7 +55,7 @@ const Navbar = () => {
               {/* Menu Items */}
               <div className="container mx-auto px-6 py-4">
                 <div className="flex flex-col gap-y-4 md:flex-row md:gap-8">
-                  {['landing', 'about', 'resume', 'skills', 'projects', 'testimonials', 'contact'].map((item) => (
+                  {['landing', 'about', 'career', 'skills', 'projects', 'testimonials', 'contact'].map((item) => (
                     <a
                       key={item}
                       href={`#${item}`}
