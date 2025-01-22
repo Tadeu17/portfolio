@@ -8,7 +8,7 @@ import { educationExperience as education } from '@/data'
 const Resume = () => {
 
   return (
-    <section id="resume" className="container min-h-screen px-6 py-20">
+    <section id="career" className="container min-h-screen px-6 py-20">
       <SectionTitle title="Career" />
 
       {/* Experience Timeline */}
