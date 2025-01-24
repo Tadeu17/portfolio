@@ -33,8 +33,20 @@ const Navbar = () => {
       observer.observe(section);
     });
 
-    return () => observer.disconnect();
-  }, []);
+    // close menu on scroll event
+    const handleScroll = () => {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [isMenuOpen]);
 
   return (
     <>

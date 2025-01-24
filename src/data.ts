@@ -150,7 +150,7 @@ export const professionalExperience: TRoleInfo[] = [
 
 export const educationExperience: TRoleInfo = {
   id: 'education',
-  timeframe: "2028 - May 2014",
+  timeframe: "2008 - May 2014",
   role: "Student & Thesis Intern",
   company: "Cardmobili",
   description: [
