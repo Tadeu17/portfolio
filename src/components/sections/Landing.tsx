@@ -32,15 +32,17 @@ const Landing = () => {
 
             <div className="flex items-center gap-3 text-white/80 justify-center lg:justify-start">
               <span>based in</span>
-              <div className="flex items-center h-[0.7em] self-end mb-1">
+              <label className="flex items-center h-[0.7em] self-end mb-1">
+                <p className='hidden'>Madeira, Portugal</p>
                 <Image
+                  aria-label="Portuguese Flag"
                   src="/portugal-flag.webp"
                   alt="Portuguese Flag"
                   width={96}
                   height={96}
                   className="h-full w-auto"
                 />
-              </div>
+              </label>
             </div>
           </h1>
 
