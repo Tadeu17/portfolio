@@ -59,7 +59,7 @@ const Navbar = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap items-center justify-between min-h-20">
             <div className="md:w-auto h-20 flex flex-col items-center justify-center text-white">
-              <span className='text-2xl font-bold'>Tadeu</span>
+              <span className='text-2xl font-bold'>Tadeu M.</span>
               <small className='text-white text-[0.6rem] self-start ml-1'>v.{version}</small>
             </div>
 
