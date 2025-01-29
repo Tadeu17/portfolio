@@ -1,52 +1,40 @@
-name: Auto Version Bump
+name: Release Workflow
 
 on:
   push:
     branches:
-      - master # Change to master if needed
+      - master
+  # Or other triggers
 
 jobs:
-  bump-version:
+  release:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Ensure the entire history is fetched
+          fetch-depth: 0  # Ensure the full history is pulled
 
-      - name: Clean Uncommitted and Untracked Changes
+      - name: Ensure Git is clean
         run: |
-          git reset --hard HEAD  # Reset any staged or unstaged changes
-          git clean -fd           # Remove untracked files and directories
+          git status
+          git stash || true  # Stash any uncommitted changes
 
-      - name: Debug Git Status and Untracked Files
-        run: |
-          git status # Shows the current status of the repository
-          git ls-files --others --exclude-standard # Lists untracked files
-          git diff # Shows any unstaged changes in tracked files
+      - name: Bump version
+        run: npm version patch --no-git-tag-version -m "chore(release): bump version to %s"  # Skip creating a tag
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: "npm"
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Bump Version
-        run: |
-          npm version patch -m "chore(release): bump version to %s"
-          git push --follow-tags origin master  # Make sure this matches your branch
+      - name: Push version changes to GitHub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Check Git Tag Status
-        run: git tag
-
-      - name: Create a New Git Tag (If Necessary)
         run: |
-          git tag -d $(git tag)  # Delete any existing tags
-          git tag "v$(npm version patch)"
-          git push origin --tags  # Push the new tag to the repo
+          git add package.json package-lock.json
+          git commit -m "chore: bump version"
+          git push origin master
+          
+      - name: Create and push version tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          git tag "v$VERSION"
+          git push origin "v$VERSION"
