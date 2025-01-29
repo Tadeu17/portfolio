@@ -1,5 +1,8 @@
 "use client";
 
+import packageJson from '../../package.json';
+const version = packageJson.version;
+
 import { useEffect, useState } from 'react';
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
@@ -55,7 +58,10 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-gray-800/90 backdrop-blur-sm">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap items-center justify-between min-h-20">
-            <span className="md:w-auto h-20 flex items-center text-2xl font-bold text-white">Tadeu</span>
+            <div className="md:w-auto h-20 flex flex-col items-center justify-center text-white">
+              <span className='text-2xl font-bold'>Tadeu</span>
+              <small className='text-white text-[0.6rem] self-start ml-1'>v.{version}</small>
+            </div>
 
             <div className='md:hidden h-20 flex-grow'></div>
 
