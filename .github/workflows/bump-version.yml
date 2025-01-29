@@ -13,7 +13,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Needed for git history
+          fetch-depth: 0 # Ensure the entire history is fetched
+
+      - name: Clean Uncommitted Changes
+        run: git reset --hard HEAD
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -27,6 +30,6 @@ jobs:
       - name: Bump Version
         run: |
           npm version patch -m "chore(release): bump version to %s"
-          git push --follow-tags origin main
+          git push --follow-tags origin master  # Make sure this matches your branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
