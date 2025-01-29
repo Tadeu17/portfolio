@@ -3,7 +3,7 @@ name: Auto Version Bump
 on:
   push:
     branches:
-      - master
+      - master # Change to master if needed
 
 jobs:
   bump-version:
@@ -17,8 +17,14 @@ jobs:
 
       - name: Clean Uncommitted and Untracked Changes
         run: |
-          git reset --hard HEAD  # Reset any staged changes
+          git reset --hard HEAD  # Reset any staged or unstaged changes
           git clean -fd           # Remove untracked files and directories
+
+      - name: Debug Git Status and Untracked Files
+        run: |
+          git status # Shows the current status of the repository
+          git ls-files --others --exclude-standard # Lists untracked files
+          git diff # Shows any unstaged changes in tracked files
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,3 +41,12 @@ jobs:
           git push --follow-tags origin master  # Make sure this matches your branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check Git Tag Status
+        run: git tag
+
+      - name: Create a New Git Tag (If Necessary)
+        run: |
+          git tag -d $(git tag)  # Delete any existing tags
+          git tag "v$(npm version patch)"
+          git push origin --tags  # Push the new tag to the repo
