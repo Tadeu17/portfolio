@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleAnchorClick(itemId: string) {
+    // we do all this in a function so that different transitions can occur concurently
     setIsMenuOpen(false)
     setActiveSection(itemId);
     document.getElementById(itemId)?.scrollIntoView({ behavior: 'smooth' });
