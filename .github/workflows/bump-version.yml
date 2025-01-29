@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-  # Or other triggers
 
 jobs:
   release:
@@ -13,15 +12,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Ensure the full history is pulled
+          fetch-depth: 0 # Ensure the full history is pulled
 
       - name: Ensure Git is clean
         run: |
           git status
           git stash || true  # Stash any uncommitted changes
 
+      - name: Set Git config
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
       - name: Bump version
-        run: npm version patch --no-git-tag-version -m "chore(release): bump version to %s"  # Skip creating a tag
+        run: |
+          npm version patch --no-git-tag-version -m "chore(release): bump version to %s"  # Skip creating a tag
 
       - name: Push version changes to GitHub
         env:
@@ -30,7 +35,7 @@ jobs:
           git add package.json package-lock.json
           git commit -m "chore: bump version"
           git push origin master
-          
+
       - name: Create and push version tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
